@@ -35,16 +35,27 @@ Things you may want to cover:
      Role       Verb   URI Pattern                 Controller # Action
 
      Ad         GET    /api/v1/users(.:format)     api/v1/users#index {:format=>:json}
+
 Oper vs Ad      POST   /api/v1/users(.:format)     api/v1/users#create {:format=>:json}
+
      Ad         GET    /api/v1/users/:id(.:format) api/v1/users#show {:format=>:json}
+
 CurOper vs Ad   PATCH  /api/v1/users/:id(.:format) api/v1/users#update {:format=>:json}
+
 CurOper vs Ad   PUT    /api/v1/users/:id(.:format) api/v1/users#update {:format=>:json}
+
 CurOper vs Ad   DELETE /api/v1/users/:id(.:format) api/v1/users#destroy {:format=>:json}
+
 Oper vs Ad      GET    /api/v1/books(.:format)     api/v1/books#index {:format=>:json}
+
 Oper vs Ad      POST   /api/v1/books(.:format)     api/v1/books#create {:format=>:json}
+
 Oper vs Ad      GET    /api/v1/books/:id(.:format) api/v1/books#show {:format=>:json}
+
 CurOper vs Ad   PATCH  /api/v1/books/:id(.:format) api/v1/books#update {:format=>:json}
+
 CurOper vs Ad   PUT    /api/v1/books/:id(.:format) api/v1/books#update {:format=>:json}
+
 CurOper vs Ad   DELETE /api/v1/books/:id(.:format) api/v1/books#destroy {:format=>:json}
     
   
