@@ -32,7 +32,8 @@ Things you may want to cover:
    
    $ rate routes 
    
-     Role       Verb   URI Pattern                 Controller#Action
+     Role       Verb   URI Pattern                 Controller # Action
+
      Ad         GET    /api/v1/users(.:format)     api/v1/users#index {:format=>:json}
 Oper vs Ad      POST   /api/v1/users(.:format)     api/v1/users#create {:format=>:json}
      Ad         GET    /api/v1/users/:id(.:format) api/v1/users#show {:format=>:json}
