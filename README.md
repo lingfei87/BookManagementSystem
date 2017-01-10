@@ -60,7 +60,7 @@ CurOper vs Ad      =>  DELETE /api/v1/books/:id(.:format) api/v1/books#destroy {
   
 Head
 
-Authentication Token Token="Token_Here"
+Authentication Token token="Token_Here"
 
 See token: rails console and ApiKey.all 
 
