@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f323139c-67ac-4174-8a5c-5c17aecbbf52" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/df015119-842e-4e8a-859d-3a728b310308/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -115,26 +107,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="book.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/book.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -145,11 +117,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="106" column="16" lean-forward="false" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+            <state relative-caret-position="210">
+              <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="books_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/books_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -219,13 +211,13 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/login/register.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/books_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/book.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/user.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/models/api_key.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
       </list>
     </option>
   </component>
@@ -892,12 +884,12 @@
       <option name="presentableId" value="Default" />
       <updated>1484031791984</updated>
       <workItem from="1484031794306" duration="87170000" />
-      <workItem from="1484294108665" duration="240000" />
+      <workItem from="1484294108665" duration="721000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87410000" />
+    <option name="totallyTimeSpent" value="87891000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1002,13 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/books_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/login_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1085,13 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1245,14 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/book.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1590">
@@ -1307,8 +1277,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="47" column="38" lean-forward="true" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        <state relative-caret-position="210">
+          <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/books_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="106" column="16" lean-forward="false" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
           <folding />
         </state>
       </provider>
