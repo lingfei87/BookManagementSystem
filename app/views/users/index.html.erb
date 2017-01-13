@@ -1,0 +1,183 @@
+<style>
+  .custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+  }
+  .custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+  }
+</style>
+
+<div id="token" style="display: none" ><%= current_user.api_key.access_token %></div>
+<div id="userID" style="display: none" ><%= current_user.id %></div>
+<div id="userRole" style="display: none" ><%= current_user.role %></div>
+
+<div class="container">
+  <div class="row col-md-10 custyle">
+    <table class="table table-striped custab">
+      <thead>
+      <a id="addUser" data-toggle="modal" data-target="#addUserModel" class="btn btn-primary btn-md pull-right"><b>+</b> Add user</a>
+      <tr>
+        <th class='text-center'>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th class="text-center">Action</th>
+      </tr>
+      </thead>
+      <tbody id="table_content">
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<!--Add User Model-->
+<div class="modal fade" id="addUserModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Create User</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name" class="control-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Role:</label>
+            <select id="role" name="role" class="custom-select form-control input-xs">
+              <option value="operator" selected>Operator</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">Images upload</label>
+            <input name="image" type="file" id="exampleInputFile">
+          </div>
+          <div class="form-group">
+            <label for="email" class="control-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email"></input>
+          </div>
+          <div class="form-group">
+            <label for="password" class="control-label">Password:</label>
+            <input type="password" class="form-control" id="password" name="password"></input>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="addUserButton" type="button" class="btn btn-primary">Create User </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Edit User Model-->
+<div class="modal fade" id="editUserModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Edit User</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name" class="control-label">Name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Role:</label>
+            <select id="role" name="role" class="custom-select form-control input-xs">
+              <option value="operator" selected>Operator</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">Images upload</label>
+            <input type="file" id="exampleInputFile">
+          </div>
+          <div class="form-group">
+            <label for="email" class="control-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email"></input>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="editUserButton" type="button" class="btn btn-primary">Edit User </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Profile</h4>
+      </div>
+      <div class="modal-body">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h3 class="panel-title" class="Show_Name"></h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+                  <div class=" col-md-9 col-lg-9 ">
+                    <table class="table table-user-information">
+                      <tbody>
+                      <tr>
+                        <td> ID:</td>
+                        <td  class="showID"></td>
+                      </tr>
+                      <tr>
+                        <td> Name:</td>
+                        <td  class="showName"></td>
+                      </tr>
+                      <tr>
+                        <td> Email: </td>
+                        <td class="showEmail"></td>
+                      </tr>
+                      <tr>
+                        <td > Role: </td>
+                        <td class="showRole"></td>
+                      </tr>
+                      <tr>
+                        <td > Created at : </td>
+                        <td class="showCreateDate"></td>
+                      </tr>
+                      <tr>
+                        <td > Modified at: </td>
+                        <td class="showModifyDate"></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

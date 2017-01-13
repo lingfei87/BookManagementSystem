@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   respond_to :json
-  before_filter :restrict_access
+  before_action :restrict_access , :except => [ :create]
 
   def index
     if check_admin == true
@@ -22,8 +22,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     user = User.new(user_params)
       if user.save
-        ApiKey.create(user_id: user.id , role: user.role)
-        render json: user, status: 201
+        render json: user, status: 200
       else
         render json: {errors: user.errors}, status: 422
       end
@@ -33,7 +32,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(params[:id])
     # Check Admin Authentication or Current User
     if check_admin == true || check_current_user(user.id) == true
-      if user.update(user_params)
+      if user.update(user_params_update)
         render json: user, status: 200
       else
         render json: {errors: user.errors},status: 422
@@ -45,6 +44,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(params[:id])
     # Check Admin Authentication or Current User
     if check_admin == true || check_current_user(user.id) == true
+      ApiKey.delete_all(user_id: user.id);
       user.destroy
       render json: "User deleted", status: 204
     else
@@ -56,6 +56,12 @@ class Api::V1::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :password, :role, :name)
   end
+
+  private
+  def user_params_update
+    params.require(:user).permit(:email, :role, :name)
+  end
+
 
   private
     # Post with token on header
@@ -82,7 +88,7 @@ class Api::V1::UsersController < ApplicationController
 
   # Check current User
   def check_current_user (userID)
-b    authenticate_or_request_with_http_token do | token , options |
+    authenticate_or_request_with_http_token do | token , options |
       if (ApiKey.find_by access_token: token).user_id.eql? userID
         return true
       else

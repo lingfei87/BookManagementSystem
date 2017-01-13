@@ -6,6 +6,6 @@ class ApiKey < ActiveRecord::Base
   def generate_access_token
     begin
       self.access_token = SecureRandom.hex
-    end while self.class.exists? (assess_token = self.access_token)
+    end while self.class.exists? (access_token = self.access_token)
   end
 end

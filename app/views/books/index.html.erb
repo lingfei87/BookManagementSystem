@@ -1,0 +1,155 @@
+<style>
+  .custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+  }
+  .custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+  }
+</style>
+
+<div id="token" style="display: none" ><%= current_user.api_key.access_token %></div>
+<div id="userID" style="display: none" ><%= current_user.id %></div>
+<div id="userRole" style="display: none" ><%= current_user.role %></div>
+
+<div class="container">
+  <div class="row col-md-10 custyle">
+    <table class="table table-striped custab">
+      <thead>
+      <a id="addBook" data-toggle="modal" data-target="#addBookModel" class="btn btn-primary btn-md pull-right"><b>+</b> Add book</a>
+      <tr>
+        <th class='text-center'>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>User ID</th>
+        <th class="text-center">Action</th>
+      </tr>
+      </thead>
+      <tbody id="table_content_book">
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!--Add User Model-->
+<div class="modal fade" id="addBookModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Create book</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="title" class="control-label">Title:</label>
+            <input type="text" class="form-control" id="title" name="title">
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="control-label">Description:</label>
+            <textarea type="text" class="form-control" id="description" name="description"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="addBookButton" type="button" class="btn btn-primary">Create book </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Edit book Model-->
+<div class="modal fade" id="editBookModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Edit book</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="title" class="control-label">Title:</label>
+            <input type="text" class="form-control" id="title" name="title">
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="control-label">Description:</label>
+            <textarea type="text" class="form-control" id="description" name="description"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="editBookButton" type="button" class="btn btn-primary">Edit book </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="profileBook" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Book Detail</h4>
+      </div>
+      <div class="modal-body">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title" class="Book_Title"></h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 " align="center"> <img alt="book Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+              <div class=" col-md-9 col-lg-9 ">
+                <table class="table table-book-information">
+                  <tbody>
+                  <tr>
+                    <td> ID:</td>
+                    <td  class="bookID"></td>
+                  </tr>
+                  <tr>
+                    <td> Title:</td>
+                    <td  class="bookTitle"></td>
+                  </tr>
+                  <tr>
+                    <td> Description:</td>
+                    <td  class="bookDescription"></td>
+                  </tr>
+                  <tr>
+                    <td> User Owner:</td>
+                    <td  class="bookUserID"></td>
+                  </tr>
+                  <tr>
+                    <td > Created at : </td>
+                    <td class="bookCreateDate"></td>
+                  </tr>
+                  <tr>
+                    <td > Modified at: </td>
+                    <td class="bookModifyDate"></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

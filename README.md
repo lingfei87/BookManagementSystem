@@ -46,7 +46,11 @@ CurOper vs Ad   PATCH  /api/v1/books/:id(.:format) api/v1/books#update {:format=
 CurOper vs Ad   PUT    /api/v1/books/:id(.:format) api/v1/books#update {:format=>:json}
 CurOper vs Ad   DELETE /api/v1/books/:id(.:format) api/v1/books#destroy {:format=>:json}
     
-  
+HTTP REQUEST for any API Must Include Token in header of the request
+
+Head
+Authentication Token Token="Token_Here"
+See token: rails console and ApiKey.all 
 
   
     
