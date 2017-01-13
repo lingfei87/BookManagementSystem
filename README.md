@@ -66,7 +66,7 @@ Authentication Token Token="Token_Here"
   
 Head
 
-Authentication Token token="Token_Here"
+Authentication Token Token="Token_Here"
 
 >>>>>>> 839a349e76c38a47e300160b112eed88277e7be4
 See token: rails console and ApiKey.all 

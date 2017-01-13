@@ -44,7 +44,8 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(params[:id])
     # Check Admin Authentication or Current User
     if check_admin == true || check_current_user(user.id) == true
-      ApiKey.delete_all(user_id: user.id);
+      ApiKey.delete_all(user_id: user.id)
+      Book.delete_all(user_id:user.id)
       user.destroy
       render json: "User deleted", status: 204
     else
